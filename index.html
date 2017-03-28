@@ -1,21 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+    <style>
+        .container h1 {
+            padding-left: 50px;
+        }
+
+        #title {
+            border: 1px solid whitesmoke;
+            width: 500px;
+            height: 90px;
+            background-color: whitesmoke;
+            color: black;
+            align-content: center;
+            text-align: center;
+            margin: auto;
+        }
+
+
+        #boxed {
+            border: 1px solid lightgray ;
+            width: 400px;
+            height: 10px;
+            background-color: whitesmoke;
+            color: black;
+            align-content: center;
+            margin: auto;
+            font-weight: bold;
+            text-align: left;
+            padding: 20px 20px 45px 20px;
+        }
+
+        #boxed2 {
+            border: 1px solid lightgrey;
+            width: 400px;
+            height: 25px;
+            background-color: whitesmoke;
+            color: black;
+            align-content: center;
+            margin: auto;
+            font-weight: bold;
+            text-align: left;
+            padding: 20px 20px 45px 20px;
+        }
+
+        #boxed3 {
+            border: 1px solid white;
+            width: 500px;
+            height: 90px;
+            background-color: white;
+            color: black;
+            align-content: center;
+            margin: auto;
+            font-weight: bold;
+            text-align: left;
+            padding: 20px 20px 45px 75px;
+        }
+
+        input[type=submit] {
+            width: 100px;
+            height: 40px;
+            padding:5px 15px;
+            background:blue;
+            color: white;
+            font-weight: bold;
+            border: 2px solid lightblue;
+        }
+
+        #feedback {
+            color: red;
+        }
+
+        #GifBox {
+            padding: 10px 60px 10px 0px;
+            text-align: center;
+        }
+
+    </style>
+
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">-->
     <title>The AJAXson 5</title>
+
+    <!-- Latest compiled and minified CSS-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+-->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
 </head>
 <body>
-    <h1>The AJAXson 5</h1>
 
-    <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?</label>
-        <input name="tag" type="text"/>
-        <input type="submit" value="Get my Gif!" />
-    </form>
+    <div id="title">
+        <h1>AJAXson 5</h1>
+    </div>
 
-    <img id="gif" src="" hidden="true"/>
-    <p id="feedback" hidden="true`"></p>
+    <br>
+    <div class="container">
+        <form id="form-gif-request" />
+            <div id="boxed">
+                <label>What kind of Jackson 5 related gif do you want?</label>
+                <br>
+                <input type="text" id="tag"/>
+            </div>
+                <br>
+            <div id="boxed2">
+                <label>Prove you are not a robot by answering this riddle:</label>
+                <br>
+                <input type="text" id="nar"/><nbsp>
+                <nbsp>Jacksons are better than one<br>
+                <label id="feedback" hidden="true"></label>
+            </div>
+            <div id="boxed3">
+                <input type="submit" value="Get my Gif!" />
+                <br><br>
+                <div id="GifBox">
+                    <img id="gif" src="" hidden="true"/>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
 
 </body>
 </html>
